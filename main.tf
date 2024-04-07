@@ -1,4 +1,4 @@
-resource "google_storage_bucket" "MY-BUCKET" {
+resource "google_storage_bucket" "my-bucket" {
   name                     = "terraform-bucket"
   location                 = "US"
   force_destroy            = true
