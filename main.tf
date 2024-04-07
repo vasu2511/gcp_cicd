@@ -21,5 +21,5 @@ resource "google_storage_bucket_object" "object" {
   name         = "abc.txt"
   source       = "code/abc.txt"
   content_type = "text/plain"
-  bucket       = google_storage_bucket.bucket.name
+  bucket       = data.google_storage_bucket.bucket.name
 }
