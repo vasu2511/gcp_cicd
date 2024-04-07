@@ -10,5 +10,7 @@ resource "google_storage_bucket_object" "default" {
   name         = "abc.txt"
   source       = "./abc.txt"
   content_type = "text/plain"
+  location     = "US"
+  project      = "vasu-first-project"
   bucket       = "gcp-tfm-my-bucket-vasu19"
 }
