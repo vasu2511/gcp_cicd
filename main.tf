@@ -12,11 +12,11 @@ data "google_dataproc_cluster" "existing_cluster" {
 
 # Create or start the cluster based on existence
 resource "google_dataproc_cluster" "example_cluster" {
-  count   = length(data.google_dataproc_cluster.existing_cluster)
-  name    = "my-first-cluster"
-  region  = "us-central1"
+  count  = length(data.google_dataproc_cluster.existing_cluster)
+  name   = "my-first-cluster"
+  region = "us-central1"
   # Add other cluster configuration options as needed
-  
+
   # Only create the cluster if it doesn't exist
   lifecycle {
     ignore_changes = [name, config]
@@ -25,11 +25,11 @@ resource "google_dataproc_cluster" "example_cluster" {
 
 # Only start the existing cluster if it exists
 resource "google_dataproc_cluster" "start_cluster" {
-  count   = length(data.google_dataproc_cluster.existing_cluster)
-  name    = "my-first-cluster"
-  region  = "us-central1"
+  count  = length(data.google_dataproc_cluster.existing_cluster)
+  name   = "my-first-cluster"
+  region = "us-central1"
   # Add other cluster configuration options as needed
-  
+
   # Only start the cluster if it exists
   lifecycle {
     ignore_changes = [name, config]
@@ -38,9 +38,9 @@ resource "google_dataproc_cluster" "start_cluster" {
 
 # Run this block if the cluster doesn't exist
 resource "google_dataproc_cluster" "create_cluster" {
-  count   = var.create_cluster ? 1 : 0
-  name    = "cluster-terraform"
-  region  = "us-central1"
+  count  = var.create_cluster ? 1 : 0
+  name   = "cluster-terraform"
+  region = "us-central1"
   # Add other cluster configuration options as needed
 }
 
