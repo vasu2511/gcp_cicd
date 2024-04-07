@@ -14,5 +14,5 @@ resource "google_storage_bucket_object" "object" {
   name         = "abc.txt"
   source       = "code/abc.txt"
   content_type = "text/plain"
-  bucket       = "gcp-tfm-my-bucket-vasu1923"
+  bucket       = google_storage_bucket.bucket.name
 }
