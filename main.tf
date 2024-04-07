@@ -13,6 +13,10 @@ resource "null_resource" "start_cluster" {
   }
 }
 
+data "google_storage_bucket" "bucket" {
+  name = "gcp-tfm-my-bucket-vasu1923"
+}
+
 resource "google_storage_bucket_object" "object" {
   name         = "abc.txt"
   source       = "code/abc.txt"
