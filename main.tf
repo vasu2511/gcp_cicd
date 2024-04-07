@@ -6,10 +6,9 @@ provider "google" {
 
 # Start the existing Dataproc cluster
 resource "null_resource" "start_cluster" {
-  count = 0
   # Use a local-exec provisioner to execute gcloud command to start the cluster
   provisioner "local-exec" {
-    command = "gcloud dataproc clusters start my-first-cluster --region your-region --project vasu-first-project"
+    command = "gcloud dataproc clusters start my-first-cluster --region us-central1 --project vasu-first-project"
   }
 }
 
