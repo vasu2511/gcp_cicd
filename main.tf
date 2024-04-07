@@ -8,7 +8,7 @@ resource "google_storage_bucket" "bucket" {
 
 resource "google_storage_bucket_object" "default" {
   name         = "abc.txt"
-  source       = "/abc.txt"
+  source       = "./abc.txt"
   content_type = "text/plain"
   bucket       = "gcp-tfm-my-bucket-vasu19"
 }
