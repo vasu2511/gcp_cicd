@@ -7,8 +7,8 @@ resource "google_storage_bucket" "bucket" {
 }
 
 resource "google_storage_bucket_object" "default" {
-  name         = "files/"
-  source       = "/abc.txt"
+  name         = "abc.txt"
+  source       = "~/abc.txt"
   content_type = "text/plain"
   bucket       = google_storage_bucket.bucket.id
 }
