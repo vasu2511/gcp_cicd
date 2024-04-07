@@ -1,4 +1,4 @@
-resource "google_storage_bucket" "my-bucket-vasu2511" {
+resource "google_storage_bucket" "gcp-tfm-my-bucket-vasu2511" {
   name                     = "terraform-bucket"
   project                  = "vasu-first-project"
   location                 = "US"
