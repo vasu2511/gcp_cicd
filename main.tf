@@ -8,7 +8,7 @@ data "google_storage_bucket" "bucket" {
 }
 
 resource "google_storage_bucket_object" "object" {
-  name         = "spark_job.py"
+  name         = "script/spark_job.py"
   source       = "code/spark_job.py"
   content_type = "text/plain"
   bucket       = data.google_storage_bucket.bucket.name
