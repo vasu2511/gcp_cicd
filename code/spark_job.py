@@ -3,7 +3,7 @@ from pyspark.sql.functions import lit
 
 spark = SparkSession.builder.getOrCreate()
 
-df1 = spark.read.option("header","true").csv("gs://my-bucket-vasu2511/StudentData.csv")
+df1 = spark.read.option("header","true").csv("gs://my-bucket-vasu2511/input/StudentData.csv")
 
 df2 = df1.withColumn("extra_column",lit("extra_data"))
 
