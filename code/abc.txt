@@ -1,3 +1,0 @@
-hi, successfully uploaded using terraform..
-
-updated.. again
