@@ -30,9 +30,10 @@ jobs:
         project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
         service_account_key: ${{ secrets.GCP_SA_TOKEN }}
         export_default_credentials: true
-      run: gcloud auth list
-      run: gcloud storage cp ./code/spark_job.py gs://my-bucket-vasu2511/spark_job_github.py
+    - run: gcloud auth list 
+    - run: gcloud storage cp ./code/spark_job.py gs://my-bucket-vasu2511/spark_job_github.py 
         
+
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
