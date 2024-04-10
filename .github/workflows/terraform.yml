@@ -35,9 +35,9 @@ jobs:
         version: '>= 363.0.0'
         project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
       
-    - name: Configure Docker
-      run: |-
-        gcloud auth configure-docker
+    # - name: Configure Docker
+    #   run: |-
+    #     gcloud auth configure-docker
     
     - name: Upload to Google Cloud Storage
       run: |- 
