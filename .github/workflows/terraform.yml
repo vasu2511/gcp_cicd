@@ -32,7 +32,7 @@ jobs:
         export_default_credentials: true
 
     - name: Copy files command
-      run:
+      run: |
         gcloud auth list 
         gcloud storage cp ./code/spark_job.py gs://my-bucket-vasu2511/spark_job_github.py
 
